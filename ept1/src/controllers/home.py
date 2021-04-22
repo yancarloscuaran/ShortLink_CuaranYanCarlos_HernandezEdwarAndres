@@ -19,9 +19,7 @@ def index():
         linksUser = linkModel.dataUser(user.session)
         return render_template('index.html', linksUser = linksUser, session = user.session )
     flash('Enlace generado correctamente', 'success')
-    url = request.form.get('link')
-    #''.join las comillas son el delimitador es decir caracter puesto despues de cada concatenación
-    # choice elige un dijito o letra random 
+    url = request.form.get('link') 
     shortLink = ''.join([choice(ascii_letters + digits) for i in range(4)])
     if not 'user' in user.session:
         Data = {

@@ -12,6 +12,8 @@ mail_settings = {
     "MAIL_PASSWORD": os.environ['correo']
 }
 
+#Contraseña: del correo de ejemplo carloscuaran018@gmail.com es: carlos#2021
+
 app.config.update(mail_settings)
 mail = Mail(app)
 
