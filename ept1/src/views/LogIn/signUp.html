@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %} {% block titulo %} Sign UP {% endblock %} {% block contenido %}
+
+<div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Sign Up</h2>
+
+    <form class="login-container" class="login-container" action="{{url_for('signUp')}}" method="POST">
+        <p><input placeholder="Name" type="text" name="name" id="name" required></p>
+        <p><input placeholder="email" type="email" name="email" id="email" required></p>
+        <p><input placeholder="Password" type="password" name="password" id="password" required></p>
+        <p><input type="submit" value="Sign Up"></p>
+    </form>
+    <a class="btn btn-success" href="{{url_for('index')}}">volver</a>
+</div>
+{% endblock %}
